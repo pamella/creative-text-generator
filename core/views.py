@@ -11,7 +11,7 @@ class SelectArtistsTemplateView(TemplateView):
 
 
 class GenerateTextTemplateView(TemplateView):
-    template_name = 'core/select_artists.html'
+    template_name = 'core/generate_text.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

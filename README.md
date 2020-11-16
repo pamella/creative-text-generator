@@ -27,7 +27,7 @@
   
 ## Possíveis problemas e como corrigí-los
 
-Lista com soluções sugeridas de problemas conhecidos que podem ocorrem durante a instalação das depedências do projeto.
+Lista com soluções sugeridas de problemas conhecidos que podem ocorrer durante a instalação das depedências do projeto.
 
 - [ERROR: Could not find a version that satisfies the requirement tensorflow](https://stackoverflow.com/a/59653873)
 - [Keras: AttributeError: 'str' object has no attribute 'decode'](https://github.com/keras-team/keras/issues/14265)

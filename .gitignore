@@ -1,0 +1,20 @@
+db.sqlite3
+.DS_Store
+mediafiles/
+*.pyc
+__pycache__/
+
+textgenrnn/
+
+# vscode
+.vscode/
+
+# pycharm
+.idea
+
+# General
+/venv/
+/env/
+/output/
+/cache/
+/build/

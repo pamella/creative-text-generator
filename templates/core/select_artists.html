@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<div class="container-select-artists" style="background-image: url('{% static 'img/background_img_01.png' %}')">
+    <div class="brand-wrapper">
+        <img class="logo" src="{% static 'img/logo.png' %}">
+        <span class="name">Lyrics Generator</span>
+    </div>
+
+    <div class="artists-wrapper">
+        <span class="info-text">Selecione dois artistas para gerar uma nova letra a partir do estilo musical
+            deles</span>
+
+        <div class="list">
+            <div class="item">
+                <div class="photo" style="background-image: url('{% static 'img/beyonce.jpg' %}')"></div>
+                <span class="name">Beyonce</span>
+            </div>
+
+            <div class="item">
+                <div class="photo" style="background-image: url('{% static 'img/rihanna.jpg' %}')"></div>
+                <span class="name">Rihanna</span>
+            </div>
+
+            <div class="item">
+                <div class="photo" style="background-image: url('{% static 'img/beyonce.jpg' %}')"></div>
+                <span class="name">Beyonce</span>
+            </div>
+
+            <div class="item">
+                <div class="photo" style="background-image: url('{% static 'img/beyonce.jpg' %}')"></div>
+                <span class="name">Beyonce</span>
+            </div>
+        </div>
+    </div>
+
+    <a href="{% url 'core:generate-text' %}?artists_names=beyonce&artists_names=rihanna">Gerar Letra</a>
+
+
+    {% if result %}
+    {{ result }}
+    {% endif %}
+
+</div>
+
+{% endblock body %}

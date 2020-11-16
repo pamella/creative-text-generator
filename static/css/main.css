@@ -1,0 +1,78 @@
+/* GENERAL */
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Using_CSS_custom_properties */
+    --color-white: #FFFFFF;
+}
+
+div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* PAGE: SELECT ARTISTS */
+.container-select-artists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.brand-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 120px 0 190px;
+}
+
+.brand-wrapper .logo {
+    width: 190px;
+    margin-bottom: 20px;
+}
+
+.brand-wrapper .name {
+    color: var(--color-white);
+    font-size: 22px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.artists-wrapper, .artists-wrapper .list .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artists-wrapper .info-text {
+    max-width: 770px;
+    margin-bottom: 48px;
+    font-size: 20px;
+    color: var(--color-white);
+    opacity: 0.6;
+    letter-spacing: 1.2px;
+}
+
+.artists-wrapper .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 848px;
+}
+
+.artists-wrapper .list .item .photo {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.artists-wrapper .list .item .name {
+    margin-right: auto;
+    color: var(--color-white);
+}

@@ -13,6 +13,11 @@
   $ python3 -m venv env
   $ source env/bin/activate (Linux/Mac) OR env\Scripts\activate (Windows)
   $ pip install -r requirements.txt
+  
+  # Como a versão do textgenrnn não está atualizada no pip, instale diretamente pelo git clone
+  $ git clone https://github.com/minimaxir/textgenrnn.git
+  $  cd textgenrnn
+  $ python setup.py install
   ```
  
 - Rode as migrações

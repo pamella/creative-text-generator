@@ -1,78 +1,126 @@
 /* GENERAL */
-html, body {
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
-    /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Using_CSS_custom_properties */
-    --color-white: #FFFFFF;
+  /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Using_CSS_custom_properties */
+  --color-white: #ffffff;
 }
 
 div {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
 
 /* PAGE: SELECT ARTISTS */
 .container-select-artists {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .brand-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 120px 0 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 120px 0 190px;
 }
 
 .brand-wrapper .logo {
-    width: 190px;
-    margin-bottom: 20px;
+  width: 190px;
+  margin-bottom: 20px;
 }
 
 .brand-wrapper .name {
-    color: var(--color-white);
-    font-size: 22px;
-    font-style: italic;
-    letter-spacing: 1px;
+  color: var(--color-white);
+  font-size: 22px;
+  font-style: italic;
+  letter-spacing: 1px;
 }
 
-.artists-wrapper, .artists-wrapper .list .item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.artists-wrapper,
+.artists-wrapper .list .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .artists-wrapper .info-text {
-    max-width: 770px;
-    margin-bottom: 48px;
-    font-size: 20px;
-    color: var(--color-white);
-    opacity: 0.6;
-    letter-spacing: 1.2px;
+  max-width: 770px;
+  margin-bottom: 48px;
+  font-size: 20px;
+  color: var(--color-white);
+  opacity: 0.6;
+  letter-spacing: 1.2px;
 }
 
 .artists-wrapper .list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 848px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 848px;
 }
 
 .artists-wrapper .list .item .photo {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 8px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 200px;
+  margin-bottom: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
 .artists-wrapper .list .item .name {
-    margin-right: auto;
-    color: var(--color-white);
+  margin-right: auto;
+  color: var(--color-white);
+}
+
+.result-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  width: 40%;
+}
+
+.result-wrapper .lines-wrapper {
+  color: #fff;
+}
+
+.result-wrapper .new-option,
+.result-wrapper .new-option-input {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  text-align: initial;
+  width: 100%;
+}
+
+.result-wrapper .new-option-input {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+.result-wrapper .new-option:hover {
+  background-color: rgba(177, 177, 255, 0.2);
+}
+
+.result-info-text {
+  color: #fff;
+  width: 100%;
+}
+
+/* Solid border */
+hr.solid-bar {
+  border-top: 1px solid #fff;
+  margin: 15px 0;
+  width: 100%;
 }

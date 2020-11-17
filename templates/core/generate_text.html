@@ -1,14 +1,37 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block body %}
+{% extends 'base.html' %} {% load static %} {% block body %}
 
 <div>
+  <div
+    class="container-select-artists"
+    style="background-image: url('{% static 'img/background_img_01.png' %}')"
+  >
+    <div class="brand-wrapper">
+      <img class="logo" src="{% static 'img/logo.png' %}" />
+      <span class="name">Lyrics Generator</span>
+    </div>
 
-    {% if result %}
-    {{ result }}
-    {% endif %}
+    <div class="result-wrapper">
+      <div class="lines-wrapper">
+        <div>{% if result %} {{ result }} {% endif %}</div>
+      </div>
 
+      <hr class="solid-bar" />
+      <span class="result-info-text"
+        >Escolha uma opção para complementar a letra</span
+      >
+      <button class="new-option">fake music line here</button>
+      <button class="new-option">fake music line here</button>
+      <button class="new-option">fake music line here</button>
+      <button class="new-option">fake music line here</button>
+      <span class="result-info-text">Ou insira uma opção abaixo</span>
+      <input
+        class="new-option-input"
+        type="text"
+        id="musicLine"
+        name="musicLine"
+      />
+    </div>
+  </div>
+
+  {% endblock body %}
 </div>
-
-{% endblock body %}

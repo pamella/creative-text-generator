@@ -16,7 +16,7 @@
   
   # Como a versão do textgenrnn não está atualizada no pip, instale diretamente pelo git clone
   $ git clone https://github.com/minimaxir/textgenrnn.git
-  $  cd textgenrnn
+  $ cd textgenrnn
   $ python setup.py install
   ```
  

@@ -11,6 +11,7 @@ body {
 }
 
 div {
+  box-sizing: border-box;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,6 +19,7 @@ div {
 
 /* PAGE: SELECT ARTISTS */
 .container-select-artists {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,7 +66,7 @@ div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 848px;
+  width: 1064px;
 }
 
 .artists-wrapper .list .item .photo {
@@ -79,6 +81,68 @@ div {
   color: var(--color-white);
 }
 
+.overview-container {
+  position: absolute;
+  bottom: 0;
+  /* display: flex; */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  padding: 0 138px;
+  background-color: rgba(0,0,0, 0.4);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.overview-container .artists {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: auto;
+}
+
+.overview-container .artists .photo {
+  width: 96px;
+  height: 96px;
+  margin-right: 16px;
+}
+
+.overview-container .artists .names {
+  margin-left: 16px;
+  color: var(--color-white);
+}
+
+.overview-container .link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 210px;
+  margin-left: auto;
+  padding: 4px 8px 4px 32px;
+  border-radius: 50px;
+  background-color: rgba(110, 108, 108, 0.6);
+  text-decoration: none;
+}
+
+.overview-container .link span {
+  letter-spacing: 1.12px;
+  font-style: bold;
+  color: var(--color-white);
+}
+
+.overview-container .link .arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #69686a;
+}
+
+
+/* PAGE: GENERATE TEXT */
 .result-wrapper {
   align-items: center;
   display: flex;

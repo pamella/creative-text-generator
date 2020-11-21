@@ -1,36 +1,54 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block body %}
+{% extends 'base.html' %} {% load static %} {% block body %}
 <div>
-  <div class="container-select-artists" style="background-image: url('{% static 'img/background_img_01.jpg' %}')">
-    <div class="brand-wrapper">
-      <img class="logo" src="{% static 'img/logo.png' %}" />
-      <span class="name">Lyrics Generator</span>
-    </div>
-
+  <div
+    class="container-select-artists"
+    style="background-image: url('{% static 'img/background_img_01.jpg' %}')"
+  >
     <div class="result-wrapper">
       <div class="lines-wrapper" id="finalLyrics">
-        <div id="lyricsTextgen">{% if result %} {{ result }} {% endif %}</div>
+        <div id="lyricsTextgen"></div>
       </div>
 
       <hr class="solid-bar" />
-      <span class="result-info-text">Escolha uma opção para complementar a letra</span>
-      <button class="new-option" onclick="generateVerse('option1')" id="option1">fake music line here</button>
-      <button class="new-option" onclick="generateVerse('option2')" id="option2">fake music line here</button>
-      <button class="new-option" onclick="generateVerse('option3')" id="option3">fake music line here</button>
+      <span class="result-info-text"
+        >Escolha uma opção para complementar a letra</span
+      >
+      <button
+        class="new-option"
+        onclick="generateVerse('option1')"
+        id="option1"
+      >
+        fake music line here
+      </button>
+      <button
+        class="new-option"
+        onclick="generateVerse('option2')"
+        id="option2"
+      >
+        fake music line here
+      </button>
+      <button
+        class="new-option"
+        onclick="generateVerse('option3')"
+        id="option3"
+      >
+        fake music line here
+      </button>
       <span class="result-info-text">Ou insira uma opção abaixo</span>
-      <input class="new-option-input" type="text" id="musicLine" name="musicLine" />
+      <input
+        class="new-option-input"
+        type="text"
+        id="musicLine"
+        name="musicLine"
+      />
     </div>
   </div>
 </div>
 
 <script type="text/javascript">
-  let result = '{{ result }}';
+  let result = "{{ result }}";
 </script>
 
-{% endblock body %}
-
-{% block scripts %}
+{% endblock body %} {% block scripts %}
 <script src="{% static 'js/generate_text.js' %}"></script>
 {% endblock %}

@@ -1,5 +1,11 @@
 {% extends 'base.html' %} {% load static %} {% block body %}
-<div>
+<div class="container-relative">
+  <a class="back-link" href="{% url 'core:select-artists' %}">
+    <div class="arrow">
+      <img src="{% static 'img/right-arrow.svg' %}" width="24px" />
+    </div>
+    <span>VOLTAR</span>
+  </a>
   <div
     class="container-select-artists"
     style="background-image: url('{% static 'img/background_img_01.jpg' %}')"

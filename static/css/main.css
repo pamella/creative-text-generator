@@ -125,13 +125,15 @@ div {
   text-decoration: none;
 }
 
-.overview-container .link span {
+.overview-container .link span,
+.back-link .span {
   letter-spacing: 1.12px;
   font-style: bold;
   color: var(--color-white);
 }
 
-.overview-container .link .arrow {
+.overview-container .link .arrow,
+.back-link .arrow {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,6 +143,31 @@ div {
   background-color: #69686a;
 }
 
+.back-link .arrow {
+  transform: rotate(180deg);
+}
+
+.container-relative {
+  position: relative;
+}
+
+.back-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+  margin-left: auto;
+  padding: 4px 32px 4px 8px;
+  border-radius: 50px;
+  background-color: rgba(110, 108, 108, 0.6);
+  text-decoration: none;
+  position: absolute;
+  z-index: 1;
+  color: white;
+  left: 50px;
+  z-index: 1;
+  top: 20px;
+}
 /* PAGE: GENERATE TEXT */
 .result-wrapper {
   display: flex;
@@ -153,6 +180,7 @@ div {
   color: #fff;
   width: 100%;
   height: 250px;
+  margin-top: 50px;
   overflow-y: scroll;
 }
 

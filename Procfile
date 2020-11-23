@@ -1,1 +1,1 @@
-web: gunicorn creative-text-generator.wsgi --log-file -
+web: gunicorn creative-text-generator.wsgi

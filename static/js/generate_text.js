@@ -7,6 +7,21 @@ let index = 0;
 let finalLyrics = []; //Array com a letra que vai sendo construída de acordo com as escolhas
 
 this.lyricsToArray();
+this.getArtistsFromUrl();
+
+function getArtistsFromUrl() {
+  const urlParams = new URLSearchParams(location.search);
+  let artists = []
+
+  let i = 0
+  for (const [key, value] of urlParams) {
+    artists[i] = value.charAt(0).toUpperCase() + value.slice(1);
+    i++;
+  }
+  document.getElementById("footer-names").innerHTML = `${artists[0]} & ${artists[1]}`;
+  document.getElementById("footer-photo-1").style.backgroundImage = `url('/static/img/${artists[0]}.jpg')`;
+  document.getElementById("footer-photo-2").style.backgroundImage = `url('/static/img/${artists[1]}.jpg')`;
+}
 
 //Função para processar a letra gerada pelo textgenrnn e dividir em um array de versos
 function lyricsToArray() {
@@ -33,7 +48,6 @@ function lyricsToArray() {
     indice = lyricsArray.indexOf("");
   }
 
-  console.log(lyricsArray);
   this.generateInitial();
 }
 

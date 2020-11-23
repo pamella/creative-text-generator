@@ -18,13 +18,18 @@ div {
 }
 
 /* PAGE: SELECT ARTISTS */
-.container-select-artists {
+.container-select-artists,
+.container-generated {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   min-height: 100vh;
+}
+
+.container-generated {
+  padding-bottom: 125px;
 }
 
 .brand-wrapper {
@@ -109,7 +114,8 @@ div {
   margin-right: 16px;
 }
 
-.overview-container .artists .names {
+.overview-container .artists .names,
+.footer .artists .names {
   margin-left: 16px;
   color: var(--color-white);
 }
@@ -216,5 +222,59 @@ div {
 hr.solid-bar {
   border-top: 1px solid #fff;
   margin: 15px 0;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  height: 125px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.footer .photo {
+  height: 96px;
+  width: 96px;
+  margin-right: 16px;
+}
+
+.footer .artists {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 450px;
+  left: 50px;
+}
+
+.footer-logo {
+  width: 142px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+  width: 142px;
+  height: 52px;
+}
+
+.footer-logo .name {
+  padding-top: 10px;
+}
+
+.container-relative-footer {
+  position: relative;
   width: 100%;
 }

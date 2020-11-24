@@ -48,6 +48,34 @@ function lyricsToArray() {
     indice = lyricsArray.indexOf("");
   }
 
+  //Removendo os versos que são apenas: '('
+  let indice2 = lyricsArray.indexOf("(");
+  while (indice2 >= 0) {
+    lyricsArray.splice(indice2, 1);
+    indice2 = lyricsArray.indexOf("(");
+  }
+
+  //Removendo os versos que são apenas: ')'
+  let indice3 = lyricsArray.indexOf(")");
+  while (indice3 >= 0) {
+    lyricsArray.splice(indice3, 1);
+    indice3 = lyricsArray.indexOf(")");
+  }
+
+  //Removendo os parênteses mal colocados dos versos
+  lyricsArray.map((verse, i) => {
+    let ind = verse.indexOf("(");
+    let ind2 = verse.indexOf(")");
+
+    if(ind >= 0 && ind2 == -1) {
+      //Remove o (
+      lyricsArray[i] = verse.replace(verse.slice(ind, ind+1), '');
+    } else if(ind2 >= 0 && ind == -1) {
+      //Remove o )
+      lyricsArray[i] = verse.replace(verse.slice(ind2, ind2+1), '');
+    }
+  })
+
   this.generateInitial();
 }
 

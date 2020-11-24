@@ -55,11 +55,11 @@ function showLoading() {
 	generateButtonText.innerHTML = "OUVINDO DISCOGRAFIAS..."
 	setTimeout(() => {
 		generateButtonText.innerHTML = "RELEMBRANDO OS CLÁSSICOS..."
-	}, 5000)
+	}, 1800)
 	setTimeout(() => {
 		generateButtonText.innerHTML = "PENSANDO POSSÍVEIS FEATS..."
-	}, 12000)
+	}, 3800)
 	setTimeout(() => {
 		generateButtonText.innerHTML = "MESCLANDO TUDO. QUASE LÁ..."
-	}, 19000)
+	}, 5800)
 }

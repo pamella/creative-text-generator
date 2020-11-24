@@ -79,10 +79,10 @@
       <span class="names">Beyonce & Rihanna</span>
     </div>
 
-    <a class="link" href="{% url 'core:generate-text' %}">
-      <span>GERAR LETRA</span>
+    <a class="link" id="generate_button" onclick="showLoading()" href="{% url 'core:generate-text' %}">
+      <span id="generate_button_text">GERAR LETRA</span>
       <div class="arrow">
-        <img src="{% static 'img/right-arrow.svg' %}" width="24px" />
+        <img id="generate_button_img" src="{% static 'img/right-arrow.svg' %}" width="24px" />
       </div>
     </a>
   </div>

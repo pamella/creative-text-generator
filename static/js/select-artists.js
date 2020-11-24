@@ -45,3 +45,21 @@ const removeAllElements = (array, elem) => {
 		index = array.indexOf(elem);
 	}
 };
+
+function showLoading() {
+	const generateButton = document.getElementById("generate_button")
+	generateButton.style.width = "320px";
+	const generateButtonImg = document.getElementById("generate_button_img")
+	generateButtonImg.src = "/static/img/loading.gif"
+	const generateButtonText = document.getElementById("generate_button_text")
+	generateButtonText.innerHTML = "OUVINDO DISCOGRAFIAS..."
+	setTimeout(() => {
+		generateButtonText.innerHTML = "RELEMBRANDO OS CLÁSSICOS..."
+	}, 5000)
+	setTimeout(() => {
+		generateButtonText.innerHTML = "PENSANDO POSSÍVEIS FEATS..."
+	}, 12000)
+	setTimeout(() => {
+		generateButtonText.innerHTML = "MESCLANDO TUDO. QUASE LÁ..."
+	}, 19000)
+}

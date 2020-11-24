@@ -105,6 +105,9 @@ function generateVerse(elemID) {
 
   document.getElementById(elemID).textContent = lyricsArray[index];
   index = index + 1;
+
+  let box = document.getElementById('finalLyrics');
+  box.scrollTop = box.scrollHeight;
 }
 
 //Evento ativado quando o usuário digitar no input de adicionar verso e clicar em Enter, adicionando o verso do input

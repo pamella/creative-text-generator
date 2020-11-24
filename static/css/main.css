@@ -284,3 +284,30 @@ hr.solid-bar {
   position: relative;
   width: 100%;
 }
+
+#end-generate-music-container {
+  display: none;
+  margin: 15px 0;
+}
+
+.end-music_message {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.button-download {
+  width: 100%;
+  border: none;
+  margin: 25px 0;
+  padding: 10px 25px;
+  border-radius: 6px;
+  text-align: initial;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fas .fa-arrow-down {
+  font-size: 20px;
+}

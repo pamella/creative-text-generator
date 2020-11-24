@@ -67,12 +67,12 @@ function lyricsToArray() {
     let ind = verse.indexOf("(");
     let ind2 = verse.indexOf(")");
 
-    if(ind >= 0 && ind2 == -1) {
+    if (ind >= 0 && ind2 == -1) {
       //Remove o (
-      lyricsArray[i] = verse.replace(verse.slice(ind, ind+1), '');
-    } else if(ind2 >= 0 && ind == -1) {
+      lyricsArray[i] = verse.replace(verse.slice(ind, ind + 1), '');
+    } else if (ind2 >= 0 && ind == -1) {
       //Remove o )
-      lyricsArray[i] = verse.replace(verse.slice(ind2, ind2+1), '');
+      lyricsArray[i] = verse.replace(verse.slice(ind2, ind2 + 1), '');
     }
   })
 
@@ -105,9 +105,17 @@ function generateVerse(elemID) {
 
   document.getElementById(elemID).textContent = lyricsArray[index];
   index = index + 1;
+  this.isMusicComplete();
 
   let box = document.getElementById('finalLyrics');
   box.scrollTop = box.scrollHeight;
+}
+
+function isMusicComplete() {
+  if ((index - 3) == 20) {
+    document.getElementById("pick-verse__container").style.display = "none";
+    document.getElementById("end-generate-music-container").style.display = "block";
+  }
 }
 
 //Evento ativado quando o usuário digitar no input de adicionar verso e clicar em Enter, adicionando o verso do input

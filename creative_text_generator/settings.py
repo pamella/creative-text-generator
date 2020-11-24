@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-import django_heroku
-from decouple import config
+# import django_heroku
+# from decouple import config
 
 from pathlib import Path
 
@@ -23,14 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', default='secret')
+SECRET_KEY = 'secret'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=True)
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '.localhost',
-    '127.0.0.1'
+    '127.0.0.1',
     '.ngrok.io',
     '.herokuapp.com',
 
@@ -135,4 +135,4 @@ STATICFILES_DIRS = [
 ]
 
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())

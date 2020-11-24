@@ -18,3 +18,5 @@ textgenrnn/
 /output/
 /cache/
 /build/
+staticfiles/
+mediafiles/

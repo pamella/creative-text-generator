@@ -132,5 +132,27 @@ inputVerse.addEventListener("keyup", function (e) {
     document.getElementById("finalLyrics").appendChild(node);
 
     inputVerse.value = "";
+
+    document.getElementById("finalLyrics").scrollTop = document.getElementById("finalLyrics").offsetHeight;
   }
 });
+
+const buttonDownload = document.getElementById("button-download");
+buttonDownload.addEventListener("click", function(e) {
+
+  let content = "";
+  for (var i = 0; i < finalLyrics.length; i++) {
+    content += finalLyrics[i] + "\n";
+  }
+
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(content));
+  element.setAttribute('download', 'lyrics');
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+})

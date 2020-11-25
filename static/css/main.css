@@ -306,6 +306,7 @@ hr.solid-bar {
   font-size: 18px;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .fas .fa-arrow-down {

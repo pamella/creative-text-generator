@@ -1,64 +1,93 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block body %}
 
-{% block body %}
+<div
+  class="container-select-artists"
+  style="background-image: url('{% static 'img/background_img_01.jpg' %}')"
+>
+  <div class="brand-wrapper">
+    <img class="logo" src="{% static 'img/logo.png' %}" />
+    <span class="name">Comfeats</span>
+  </div>
 
-<div class="container-select-artists" style="background-image: url('{% static 'img/background_img_01.jpg' %}')">
-    <div class="brand-wrapper">
-        <img class="logo" src="{% static 'img/logo.png' %}">
-        <span class="name">Lyrics Generator</span>
+  <div class="artists-wrapper">
+    <span class="info-text"
+      >Selecione dois artistas para gerar uma nova letra a partir do estilo
+      musical deles</span
+    >
+
+    <div class="list">
+      <div class="item" id="beyonce">
+        <div
+          class="photo"
+          style="background-image: url('{% static 'img/beyonce.jpg' %}')"
+        ></div>
+        <span class="name">Beyonce</span>
+      </div>
+
+      <div class="item" id="rihanna">
+        <div
+          class="photo"
+          style="background-image: url('{% static 'img/rihanna.jpg' %}')"
+        ></div>
+        <span class="name">Rihanna</span>
+      </div>
+
+      <div class="item" id="metallica">
+        <div
+          class="photo"
+          style="background-image: url('{% static 'img/metallica.jpg' %}')"
+        ></div>
+        <span class="name">Metallica</span>
+      </div>
+
+      <div class="item" id="billie">
+        <div
+          class="photo"
+          style="background-image: url('{% static 'img/billie.jpg' %}')"
+        ></div>
+        <span class="name">Billie Eilish</span>
+      </div>
+
+      <div class="item" id="elvis">
+        <div
+          class="photo"
+          style="background-image: url('{% static 'img/elvis.jpg' %}')"
+        ></div>
+        <span class="name">Elvis Presley</span>
+      </div>
+
+      <div class="item" id="avril">
+        <div
+          class="photo"
+          style="background-image: url('{% static 'img/avril.jpg' %}')"
+        ></div>
+        <span class="name">Avril Lavigne</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="overview-container">
+    <div class="artists">
+      <div
+        class="photo"
+        style="background-image: url('{% static 'img/beyonce.jpg' %}')"
+      ></div>
+      <div
+        class="photo"
+        style="background-image: url('{% static 'img/rihanna.jpg' %}')"
+      ></div>
+      <span class="names">Beyonce & Rihanna</span>
     </div>
 
-    <div class="artists-wrapper">
-        <span class="info-text">Selecione dois artistas para gerar uma nova letra a partir do estilo musical
-            deles</span>
-
-        <div class="list">
-            <div class="item" id="beyonce">
-                <div class="photo" style="background-image: url('{% static 'img/beyonce.jpg' %}')"></div>
-                <span class="name">Beyonce</span>
-            </div>
-
-            <div class="item" id="rihanna">
-                <div class="photo" style="background-image: url('{% static 'img/rihanna.jpg' %}')"></div>
-                <span class="name">Rihanna</span>
-            </div>
-
-            <div class="item" id="metallica">
-                <div class="photo" style="background-image: url('{% static 'img/metallica.jpg' %}')"></div>
-                <span class="name">Metallica</span>
-            </div>
-
-            <div class="item" id="billie">
-                <div class="photo" style="background-image: url('{% static 'img/billie.jpg' %}')"></div>
-                <span class="name">Billie Eilish</span>
-            </div>
-
-            <div class="item" id="elvis">
-                <div class="photo" style="background-image: url('{% static 'img/elvis.jpg' %}')"></div>
-                <span class="name">Elvis Presley</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="overview-container">
-        <div class="artists">
-            <div class="photo" style="background-image: url('{% static 'img/beyonce.jpg' %}')"></div>
-            <div class="photo" style="background-image: url('{% static 'img/rihanna.jpg' %}')"></div>
-            <span class="names">Beyonce & Rihanna</span>
-        </div>
-
-        <a class="link" href="{% url 'core:generate-text' %}">
-            <span>GERAR LETRA</span>
-            <div class="arrow">
-                <img src="{% static 'img/right-arrow.svg' %}" width="24px">
-            </div>
-        </a>
-    </div>
+    <a class="link" id="generate_button" onclick="showLoading()" href="{% url 'core:generate-text' %}">
+      <span id="generate_button_text">GERAR LETRA</span>
+      <div class="arrow">
+        <img id="generate_button_img" src="{% static 'img/right-arrow.svg' %}" width="24px" />
+      </div>
+    </a>
+  </div>
 </div>
 
-{% endblock body %}
-
-{% block scripts %}
+{% endblock body %} {% block scripts %}
 <script src="{% static 'js/select-artists.js' %}"></script>
 {% endblock %}

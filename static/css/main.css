@@ -294,6 +294,7 @@ hr.solid-bar {
   color: white;
   display: flex;
   justify-content: center;
+  font-size: 22px;
 }
 
 .button-download {

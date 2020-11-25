@@ -15,10 +15,10 @@ function getArtistsFromUrl() {
 
   let i = 0
   for (const [key, value] of urlParams) {
-    artists[i] = value.charAt(0).toUpperCase() + value.slice(1);
+    artists[i] = value;
     i++;
   }
-  document.getElementById("footer-names").innerHTML = `${artists[0]} & ${artists[1]}`;
+  document.getElementById("footer-names").innerHTML = `${artists[0].charAt(0).toUpperCase() + artists[0].slice(1)} & ${artists[1].charAt(0).toUpperCase() + artists[1].slice(1)}`;
   document.getElementById("footer-photo-1").style.backgroundImage = `url('/static/img/${artists[0]}.jpg')`;
   document.getElementById("footer-photo-2").style.backgroundImage = `url('/static/img/${artists[1]}.jpg')`;
 }
